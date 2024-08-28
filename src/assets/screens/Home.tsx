@@ -1,5 +1,11 @@
 import React from "react";
-import { Category, Header, OrderUpdates } from "../components/index";
+import {
+  Category,
+  Header,
+  OrderUpdates,
+  RecentlyViewed,
+  AlsoLike,
+} from "../components/index";
 
 const Home = () => {
   return (
@@ -7,6 +13,8 @@ const Home = () => {
       <Header />
       <Category />
       <OrderUpdates />
+      <RecentlyViewed />
+      <AlsoLike />
     </div>
   );
 };
