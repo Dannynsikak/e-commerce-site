@@ -32,7 +32,7 @@ const Category: React.FC = () => {
   };
 
   return (
-    <div className="flex justify-center space-x-4 p-4 bg-white mb-[1.5em]">
+    <div className="hidden xl:flex xl:justify-center xl:space-x-4 xl:p-4 bg-white mb-[1.5em]">
       {Object.keys(filterOptions).map((filter) => (
         <select
           aria-label="Choose an option"

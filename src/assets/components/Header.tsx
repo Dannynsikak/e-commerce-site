@@ -5,13 +5,13 @@ import { IoCartOutline } from "react-icons/io5";
 
 const Header: React.FC = () => {
   return (
-    <nav className="p-[3em_0] w-[100%] m-[0_auto]">
-      <div className="flex items-center justify-around">
+    <nav className="hidden xl:block p-[3em_0] w-[100%] m-[0_auto]">
+      <div className="xl:flex xl:items-center xl:justify-around">
         <div>
           <h1 className="cursor-pointer font-bold text-[1.5rem]">futura</h1>
         </div>
         <div className="bg-[#D9D9D9] flex items-center gap-3 rounded-2xl w-[50%]">
-          <div className="">
+          <div className="p-[.5em]">
             <FaSearch className="size-7" />
           </div>
 

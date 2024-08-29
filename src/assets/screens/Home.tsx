@@ -5,16 +5,27 @@ import {
   OrderUpdates,
   RecentlyViewed,
   AlsoLike,
+  Discover,
+  Footer,
 } from "../components/index";
 
 const Home = () => {
   return (
-    <div>
-      <Header />
-      <Category />
-      <OrderUpdates />
-      <RecentlyViewed />
-      <AlsoLike />
+    <div className="">
+      <div>
+        {" "}
+        <Header />
+        <Category />
+      </div>
+      <div className="flex justify-end">
+        <div className="w-[95%] ">
+          <OrderUpdates />
+          <RecentlyViewed />
+          <AlsoLike />
+          <Discover />
+        </div>
+      </div>
+      <Footer />
     </div>
   );
 };
