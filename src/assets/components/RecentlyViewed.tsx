@@ -14,7 +14,7 @@ const RecentlyViewed: React.FC = () => {
             <MdNavigateNext className="size-6" />
           </div>
         </div>{" "}
-        <div className="flex  items-center *:flex-grow-0 *:flex-shrink-0 overflow-x-auto space-x-4">
+        <div className="flex items-center *:flex-grow-0 *:flex-shrink-0 overflow-x-auto space-x-4 overflow-y-hidden">
           {items.map((item, id) => (
             <div key={id} className="space-y-4 ">
               <img

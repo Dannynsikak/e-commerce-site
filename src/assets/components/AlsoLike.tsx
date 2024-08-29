@@ -4,8 +4,8 @@ import { items } from "../data/alsoLike";
 
 const AlsoLike = () => {
   return (
-    <div className="">
-      <div>
+    <div className="mt-[2em]">
+      <div className="">
         <div className="flex items-center space-x-3 mb-[1em]">
           <h1 className="text-[1.3rem] font-bold">You might also like</h1>
           <div className="inline-block rounded-2xl bg-[#D9D9D9]">
