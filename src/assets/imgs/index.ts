@@ -35,3 +35,7 @@ export { default as Frame33 } from "./Frame 84.png";
 export { default as Frame34 } from "./Frame 86 (1).png";
 export { default as Frame35 } from "./Frame 86 (2).png";
 export { default as Frame36 } from "./Frame 86.png";
+export { default as Frame37 } from "./download 1.png";
+export { default as Frame38 } from "./download (1) 1.png";
+export { default as Frame39 } from "./download (2).png";
+export { default as Frame40 } from "./kisspng-mastercard-visa-bank-card-portable-network-graphic--5b72ceb25742b5.6910264415342506743574 2.png";

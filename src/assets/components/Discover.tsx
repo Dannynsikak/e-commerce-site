@@ -5,7 +5,7 @@ import { FaStar } from "react-icons/fa";
 
 const Discover = () => {
   return (
-    <div className="mt-[1.5em]">
+    <div className="mt-[1.5em] mb-[6em]">
       <div>
         <div className="flex items-center space-x-3 mb-[1em]">
           <h1 className="text-[1.3rem] font-bold">Discover new brands</h1>
