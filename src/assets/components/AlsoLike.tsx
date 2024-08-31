@@ -2,7 +2,7 @@ import React from "react";
 import { MdNavigateNext } from "react-icons/md";
 import { items } from "../data/alsoLike";
 
-const AlsoLike = () => {
+const AlsoLike: React.FC = () => {
   return (
     <div className="mt-[2em]">
       <div className="">

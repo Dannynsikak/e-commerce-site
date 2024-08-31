@@ -1,9 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
 import { MdNavigateNext } from "react-icons/md";
 import { items } from "../data/discover";
 import { FaStar } from "react-icons/fa";
 
-const Discover = () => {
+const Discover: React.FC = () => {
+  const [followed, setFollowed] = useState<boolean[]>(
+    new Array(items.length).fill(false)
+  );
+
+  // Function to handle the follow/unfollow logic
+  const handleFollowClick = (id: number) => {
+    setFollowed((prevFollowed) => {
+      const newFollowed = [...prevFollowed];
+      newFollowed[id] = !newFollowed[id]; // Toggle the follow state for the specific item
+      return newFollowed;
+    });
+  };
+
   return (
     <div className="mt-[1.5em] mb-[6em]">
       <div>
@@ -32,8 +45,11 @@ const Discover = () => {
                     <span>{item.price}</span>
                   </span>
                 </div>
-                <button className="bg-[#000000] text-white p-[.5em_3em] rounded-xl">
-                  {item.btn}
+                <button
+                  onClick={() => handleFollowClick(id)} // pass the index of the item to the handler
+                  className="bg-[#000000] text-white p-[.5em_3em] rounded-xl"
+                >
+                  {followed[id] ? "Followed" : "Follow"}
                 </button>
               </div>
             ))}
