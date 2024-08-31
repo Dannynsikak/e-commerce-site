@@ -8,7 +8,7 @@ import { FaTag } from "react-icons/fa6";
 
 const Header: React.FC = () => {
   return (
-    <nav className="p-[3em_0] w-[100%] m-[0_auto]">
+    <nav className="p-[3em_0] w-[95%] m-[0_auto]">
       <div className="xl:flex xl:items-center xl:justify-around">
         <div className="space-y-3 ml-[1.5em] xl:ml-0">
           <h1 className="cursor-pointer font-bold text-[1.5rem]">futura</h1>

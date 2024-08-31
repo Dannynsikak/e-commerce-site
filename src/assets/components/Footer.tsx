@@ -28,8 +28,10 @@ const Footer: React.FC = () => {
             <span>
               <h4>Newsletter</h4>
               <p>Stay up to date with us to get the recent latest updates</p>
-              <span>Your email address</span>
-              <button>Sign Up</button>
+              <span className="bg-purple-500 p-[.2em] whitespace-nowrap">
+                Your email address
+              </span>
+              <button className="bg-gray-300">Sign Up</button>
             </span>
           </div>
           <div className="md:flex md:gap-4">

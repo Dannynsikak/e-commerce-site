@@ -5,3 +5,4 @@ export { default as RecentlyViewed } from "./RecentlyViewed";
 export { default as AlsoLike } from "./AlsoLike";
 export { default as Discover } from "./Discover";
 export { default as Footer } from "./Footer";
+export { default as Main } from "./Main";
