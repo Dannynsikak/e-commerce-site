@@ -5,18 +5,35 @@ import Home from "./assets/screens/Home";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import CartScreen from "./assets/screens/CartScreen";
 import CheckoutScreen from "./assets/screens/CheckoutScreen";
+import { NotFound } from "./assets/components";
+import { Provider } from "react-redux";
+import { store } from "./redux/store";
+import { ProtectedRoute } from "./assets/components/ProtectedRoute";
+// import Login from "./assets/components/Login";
+import RegisterUser from "./assets/components/RegisterUser";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
 );
 root.render(
-  <BrowserRouter>
-    <Routes>
-      <Route path="/" element={<Home />}></Route>
-      <Route path="cart" element={<CartScreen />} />
-      <Route path="checkout" element={<CheckoutScreen />} />
-    </Routes>
-  </BrowserRouter>
+  <Provider store={store}>
+    <BrowserRouter>
+      <Routes>
+        {/* Public Route */}
+        <Route path="/register" element={<RegisterUser />} />
+
+        {/* Protected Routes */}
+        <Route element={<ProtectedRoute />}>
+          <Route path="/" element={<Home />} />
+          <Route path="cart" element={<CartScreen />} />
+          <Route path="checkout" element={<CheckoutScreen />} />
+        </Route>
+
+        {/* Catch-All for 404 */}
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+    </BrowserRouter>
+  </Provider>
 );
 
 // If you want to start measuring performance in your app, pass a function
