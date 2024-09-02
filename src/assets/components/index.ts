@@ -9,3 +9,4 @@ export { default as Main } from "./Main";
 export { default as SimilarProducts } from "./SimilarProducts";
 export { default as UserDetails } from "./UserDetails";
 export { default as SummarySection } from "./SummarySection";
+export { default as NotFound } from "./NotFound";

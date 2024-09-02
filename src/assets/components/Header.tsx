@@ -5,13 +5,16 @@ import { IoCartOutline } from "react-icons/io5";
 import { IoReorderFourOutline } from "react-icons/io5";
 import { FaCircleCheck } from "react-icons/fa6";
 import { FaTag } from "react-icons/fa6";
+import { Link } from "react-router-dom";
 
 const Header: React.FC = () => {
   return (
     <nav className="p-[3em_0] w-[95%] m-[0_auto]">
       <div className="xl:flex xl:items-center xl:justify-around">
         <div className="space-y-3 ml-[1.5em] xl:ml-0">
-          <h1 className="cursor-pointer font-bold text-[1.5rem]">futura</h1>
+          <Link to={"/"}>
+            <h1 className="cursor-pointer font-bold text-[1.5rem]">futura</h1>
+          </Link>
           <div className="flex items-center space-x-20 xl:hidden justify-around">
             <IoReorderFourOutline className="size-7" />
             <div className="bg-[#D9D9D9] items-center gap-3 rounded-2xl w-[50%] flex">
@@ -62,7 +65,9 @@ const Header: React.FC = () => {
         </div>
         <div className="xl:gap-3 *:cursor-pointer hidden xl:flex">
           <FaHeart className="size-7" />
-          <IoCartOutline className="size-7" />
+          <Link to={"/cart"}>
+            <IoCartOutline className="size-7" />
+          </Link>
           <p className="inline-block bg-[#D9D9D9] p-[.3em_1em] rounded-full">
             T
           </p>
