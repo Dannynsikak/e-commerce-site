@@ -4,6 +4,7 @@ import reportWebVitals from "./reportWebVitals";
 import Home from "./assets/screens/Home";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import CartScreen from "./assets/screens/CartScreen";
+import CheckoutScreen from "./assets/screens/CheckoutScreen";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
@@ -13,6 +14,7 @@ root.render(
     <Routes>
       <Route path="/" element={<Home />}></Route>
       <Route path="cart" element={<CartScreen />} />
+      <Route path="checkout" element={<CheckoutScreen />} />
     </Routes>
   </BrowserRouter>
 );
