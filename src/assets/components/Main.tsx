@@ -5,10 +5,12 @@ import { FaChevronUp } from "react-icons/fa6";
 import { FaChevronDown } from "react-icons/fa6";
 import { IoMdAdd } from "react-icons/io";
 import { FiMinus } from "react-icons/fi";
+import { Link } from "react-router-dom";
+import SimilarProducts from "./SimilarProducts";
 
 const Main: React.FC = () => {
   return (
-    <main className="w-[95%] m-[0_auto]">
+    <main className="w-[95%] m-[0_auto] space-y-20">
       <section className="md:flex md:*:w-[90%] md:gap-5">
         <div>
           <h3 className="font-medium text-[1.5rem]">My Basket</h3>
@@ -147,12 +149,17 @@ const Main: React.FC = () => {
               />{" "}
               <div className="*:block space-y-3">
                 <p className="font-bold text-[1rem]">NGN40,000</p>
-                <button className="w-[70%] sm:w-[100%] bg-black rounded-xl text-white p-[.5em]">
+                <Link
+                  to={"/checkout"}
+                  className="text-center w-[70%] sm:w-[100%] bg-black rounded-xl text-white p-[.5em]"
+                >
                   Checkout
-                </button>
-                <button className="w-[70%] sm:w-[100%] bg-black rounded-xl text-white p-[.5em]">
-                  Continue shopping
-                </button>
+                </Link>
+                <Link to={"/"}>
+                  <button className="w-[70%] sm:w-[100%] bg-black rounded-xl text-white p-[.5em]">
+                    Continue shopping
+                  </button>
+                </Link>
                 <button className="w-[70%] sm:w-[100%] bg-black rounded-xl text-white p-[.5em]">
                   Refund policy
                 </button>
@@ -161,8 +168,10 @@ const Main: React.FC = () => {
           </div>
         </article>
       </section>
-      <div>
-        <div></div>
+      <div className="">
+        <div>
+          <SimilarProducts />
+        </div>
       </div>
     </main>
   );

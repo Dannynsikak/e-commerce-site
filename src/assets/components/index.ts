@@ -6,3 +6,6 @@ export { default as AlsoLike } from "./AlsoLike";
 export { default as Discover } from "./Discover";
 export { default as Footer } from "./Footer";
 export { default as Main } from "./Main";
+export { default as SimilarProducts } from "./SimilarProducts";
+export { default as UserDetails } from "./UserDetails";
+export { default as SummarySection } from "./SummarySection";

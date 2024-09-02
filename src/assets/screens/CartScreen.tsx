@@ -1,5 +1,5 @@
 import React from "react";
-import { AlsoLike, Footer, Header, Main } from "../components/index";
+import { Footer, Header, Main } from "../components/index";
 
 const CartScreen: React.FC = () => {
   return (
@@ -7,9 +7,6 @@ const CartScreen: React.FC = () => {
       <div>
         <Header />
         <Main />
-        <div className="w-[95%] m-[0_auto] mb-[2em]">
-          <AlsoLike />
-        </div>
         <Footer />
       </div>
     </div>
