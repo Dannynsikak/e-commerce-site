@@ -2,12 +2,13 @@ import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { login } from "../../redux/constants/authActions";
 import { RootState } from "../../redux/store";
+import { ThunkDispatch } from "redux-thunk";
 
 const Login: React.FC = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  const dispatch = useDispatch();
+  const dispatch: ThunkDispatch<RootState, void, any> = useDispatch();
   const { loading, error, user } = useSelector(
     (state: RootState) => state.auth
   );
@@ -22,7 +23,9 @@ const Login: React.FC = () => {
       <form onSubmit={handleSubmit} className="bg-white p-6 rounded shadow-md">
         <h2 className="text-xl font-semibold mb-4">Login</h2>
         <div className="mb-4">
-          <label className="block text-gray-700">Email</label>
+          <label htmlFor="email" className="block text-gray-700">
+            Email
+          </label>
           <input
             type="email"
             value={email}
