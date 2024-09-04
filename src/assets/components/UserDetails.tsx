@@ -1,9 +1,10 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import { doc, getDoc } from "firebase/firestore";
+import { db } from "../../lib/firebase";
 import { Frame48 } from "../imgs";
 import SummarySection from "./SummarySection";
 
 const CheckoutForm: React.FC = () => {
-  // State management for form inputs
   const [formData, setFormData] = useState({
     email: "",
     country: "Nigeria",
@@ -17,6 +18,29 @@ const CheckoutForm: React.FC = () => {
     cvv: "",
     validUntil: "",
   });
+
+  const userId = "AP230fxxcd79qFyCtxkd"; // Replace with the actual user ID you are working with
+
+  // Fetch user data from Firestore
+  useEffect(() => {
+    const fetchUserData = async () => {
+      try {
+        const userDoc = await getDoc(doc(db, "users", userId));
+        if (userDoc.exists()) {
+          setFormData((prevState) => ({
+            ...prevState,
+            ...userDoc.data(),
+          }));
+        } else {
+          console.log("No such document!");
+        }
+      } catch (error) {
+        console.error("Error fetching user data: ", error);
+      }
+    };
+
+    fetchUserData();
+  }, [userId]);
 
   // Handle form input changes
   const handleChange = (
@@ -32,7 +56,7 @@ const CheckoutForm: React.FC = () => {
   // Handle form submission
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Here you would typically send the form data to your backend API
+    // Here you would typically send the form data to your backend API or Firestore
     console.log(formData);
   };
 
@@ -68,8 +92,8 @@ const CheckoutForm: React.FC = () => {
                 onChange={handleChange}
                 className="w-full border border-gray-300 p-2 rounded"
               >
-                <option value="Nigeria">Nigeria</option>{" "}
-                <option value="Cameroon">Cameroon</option>{" "}
+                <option value="Nigeria">Nigeria</option>
+                <option value="Cameroon">Cameroon</option>
                 <option value="Algeria">Algeria</option>
                 {/* Add more countries here if needed */}
               </select>

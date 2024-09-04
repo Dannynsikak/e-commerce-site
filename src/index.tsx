@@ -11,6 +11,7 @@ import { store } from "./redux/store";
 import { ProtectedRoute } from "./assets/components/ProtectedRoute";
 // import Login from "./assets/components/Login";
 import RegisterUser from "./assets/components/RegisterUser";
+import Login from "./assets/components/Login";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
@@ -20,7 +21,7 @@ root.render(
     <BrowserRouter>
       <Routes>
         {/* Public Route */}
-        <Route path="/register" element={<RegisterUser />} />
+        <Route path="/login" element={<Login />} />
 
         {/* Protected Routes */}
         <Route element={<ProtectedRoute />}>
