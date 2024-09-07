@@ -35,7 +35,7 @@ const Header: React.FC = () => {
               <IoCartOutline className="size-7" />
             </div>
           </div>
-          <div className="flex *:w-[15%] justify-center space-x-5 md:space-x-3 xl:hidden ">
+          <div className="flex text-[.6rem] sm:*:w-[15%] justify-center space-x-5 md:space-x-3 xl:hidden  sm:text-[.8rem] md:text-[1.1rem]">
             <div className="flex border-2 border-[#CACACA] rounded-xl p-[.3em] gap-2">
               <FaHeart className="size-7" />
               <button>Favorites</button>
