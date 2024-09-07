@@ -5,12 +5,12 @@ import Home from "./assets/screens/Home";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import CartScreen from "./assets/screens/CartScreen";
 import CheckoutScreen from "./assets/screens/CheckoutScreen";
-import { NotFound } from "./assets/components";
+import { NotFound, SignUp } from "./assets/components";
 import { Provider } from "react-redux";
 import { store } from "./redux/store";
 import { ProtectedRoute } from "./assets/components/ProtectedRoute";
 // import Login from "./assets/components/Login";
-import RegisterUser from "./assets/components/RegisterUser";
+// import RegisterUser from "./assets/components/RegisterUser";
 import Login from "./assets/components/Login";
 
 const root = ReactDOM.createRoot(
@@ -26,6 +26,7 @@ root.render(
         {/* Protected Routes */}
         <Route element={<ProtectedRoute />}>
           <Route path="/" element={<Home />} />
+          <Route path="/signUp" element={<SignUp />} />
           <Route path="cart" element={<CartScreen />} />
           <Route path="checkout" element={<CheckoutScreen />} />
         </Route>

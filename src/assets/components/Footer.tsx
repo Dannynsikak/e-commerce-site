@@ -4,6 +4,7 @@ import { FaTwitter } from "react-icons/fa";
 import { FaYoutube } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { items } from "../data/paymentMethods";
+import { Link } from "react-router-dom";
 
 const Footer: React.FC = () => {
   return (
@@ -28,10 +29,17 @@ const Footer: React.FC = () => {
             <span>
               <h4>Newsletter</h4>
               <p>Stay up to date with us to get the recent latest updates</p>
-              <span className="bg-purple-500 p-[.2em] whitespace-nowrap">
-                Your email address
-              </span>
-              <button className="bg-gray-300">Sign Up</button>
+              <input
+                type="text"
+                name="email"
+                id="email"
+                placeholder="Your email address"
+                className="bg-purple-500 outline-none w-[50%]"
+              />
+              {/* <span className="bg-purple-500 p-[.2em] whitespace-nowrap"></span> */}
+              <Link to="/signUp">
+                <button className="bg-gray-300">Sign Up</button>
+              </Link>
             </span>
           </div>
           <div className="md:flex md:gap-4">
